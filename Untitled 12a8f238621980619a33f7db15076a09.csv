@@ -1,0 +1,26 @@
+﻿name boss,"icon ",Property
+King Slime,Slime_Crown.png,Được triệu hồi bằng Slime Crown
+Eye of Cthulhu,Suspicious_Looking_Eye.png,Được triệu hồi với một Suspicious Looking Eye
+Eater of Worlds,Worm_Food.png,Triệu hồi bằng Worm Food hoặc bằng cách phá vỡ 3 Shadow Orb
+Brain of Cthulhu,Bloody_Spine.png,Triệu hồi bằng Bloody Spine hoặc bằng cách phá vỡ 3 Crimson Hearts
+Queen Bee,"Larva.png, Abeemination.png",Được triệu hồi bằng Abeemination hoặc bằng cách phá vỡ Larva
+Skeletron,Clothier_Voodoo_Doll.png,Được triệu hồi bằng cách kích hoạt lời nguyền của Ông già hoặc bằng cách giết Người thợ may bằng Búp bê Voodoo của Người thợ may
+Deerclops,Deer_Thing.png,Được triệu hồi bằng  Deer Thing
+Wall of Flesh,Guide_Voodoo_Doll.png,Được triệu hồi bằng cách ném một Búp bê Voodoo Hướng dẫn vào dung nham
+Queen Slime,Gelatin_Crystal.png,Triệu hồi bằng tinh thể gelatin
+The Twins,Mechanical_Eye.png,Được triệu hồi bằng Mechanical Eye
+The Destroyer,Mechanical_Worm.png,Được triệu hồi bằng Mechanical Worm
+Skeletron Prime,Mechanical_Skull.png,Được triệu hồi bằng Mechanical Skull
+Mechdusa,Ocrams_Razor.png,Triệu hồi bằng Ocram's Razor
+Plantera,Planteras_Bulb.png,Được triệu hồi bằng cách phá hủy một Plantera's Bulb
+Golem,"Lihzahrd_Altar.png, Lihzahrd_Power_Cell.png",Được triệu hồi bằng cách sử dụng Lihzahrd Power Cell tại Lihzahrd Altar
+Duke Fishron,Truffle_Worm.png,Được triệu hồi bằng cách câu cá ở quần xã sinh vật Đại dương với Truffle Worm làm mồi nhử
+Empress of Light ,Prismatic_Lacewing.png,Được triệu hồi bằng cách giết một Prismatic Lacewing
+Lunatic Cultist,"Cultist_Archer.png, Lunatic_Devotee.gif",Được triệu hồi bằng cách giết tất cả các Cultists ở lối vào Dungeon
+Moon Lord,Celestial_Sigil.png,Được triệu hồi bằng Celestial SigilCelestial Sigil hoặc bằng cách đánh bại Celestial Pillars
+Betsy/Dark Mage/Ogre,Eternia_Crystal.png,Sự kiện được bắt đầu bằng Pha lê Eternia
+Flying Dutchman,Pirate_Map.png,Sự kiện bắt đầu bằng Bản đồ cướp biển
+Pumpking/Mourning Wood,Pumpkin_Moon_Medallion.png,Sự kiện được khởi tạo bằng Huy chương Mặt trăng bí ngô
+Ice Queen/Everscream/Santa-NK1,Naughty_Present.png,Sự kiện bắt đầu bằng một Món quà nghịch ngợm
+Martian Saucer,Martian_Probe.png,Sự kiện bắt đầu bằng cách để một tàu thăm dò sao Hỏa chạy thoát sau khi phát hiện ra người chơi
+Solar/Nebula/Vortex/Stardust Pillar,Lunatic_Cultist.png,Sự kiện bắt đầu bằng việc đánh bại Lunatic Cultist

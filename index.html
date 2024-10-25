@@ -1,0 +1,717 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Bosses</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	width:auto;
+	height:auto;
+}
+#eb71bab8-81b1-4596-89eb-419ccff27ce0 , h2 {
+	margin-bottom:10%;
+}
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12a8f238-6219-80a8-afbd-da1bb82b53f0" class="page mono"><header><div class="page-header-icon undefined"><img class="icon" src="8a51m7r62bhd1.gif"/></div><h1 class="page-title">Bosses</h1><p class="page-description"></p></header><div class="page-body"><hr id="12a8f238-6219-80fc-a44a-e19572aeea2d"/><div id="12a8f238-6219-80f6-9469-e72178f8017a" class="column-list"><div id="36ef320d-8d79-4be0-ac3a-d7a2e3a212f1" style="width:43.75%" class="column"><h2 id="2bcc3cc6-2416-4326-9c6b-0f716da2d699" class="">King Slime:</h2><p id="12a8f238-6219-80a7-a4a6-ce9484236695" class="">King Slime là một con slime xanh khổng lồ với 2.000 / <mark class="highlight-yellow">2.800</mark> / <mark class="highlight-red">3.570</mark> máu. Nó được triệu hồi bằng Slime Crown, hoặc sau khi giết 150 (75 nếu nó đã bị giết) slime trong một trận Slime Rain, hoặc cũng hiếm khi có thể xuất hiện hoàn toàn một mình ở một phần ba ngoài của bản đồ</p><p id="12a8f238-6219-8064-89bd-e62abc90f7b4" class="">King Slime ở chế độ chuyên gia sẽ thả một Đồng vàng, một hoặc hai mảnh quần áo Ninja và một trong số nhiều vật phẩm liên quan đến chất nhờn.</p></div><div id="3d1efa56-1093-497d-bf44-e6951a7bdbcc" style="width:56.25%" class="column"><h1 id="12a8f238-6219-80e1-8744-c79504591c09" class="">Guide:King Slime strategies</h1><figure id="12a8f238-6219-801e-8056-e4834c3241ed" class="image"><a href="King_Slime_Trophy.png"><img style="width:48px" src="King_Slime_Trophy.png"/></a></figure><figure id="12a8f238-6219-8002-9305-ecca9f8996f1" class="image"><a href="King_Slime.gif"><img style="width:240px" src="King_Slime.gif"/></a></figure><p id="12a8f238-6219-807d-b541-fd54045d0cb8" class="">Trong Chế độ chuyên gia (và Chế độ bậc thầy), King Slime có thể triệu hồi các Slime có gai, tương tự như Slime rừng có gai và Slime băng có gai.</p><p id="12a8f238-6219-8064-aae5-de1bf5d3a3e9" class="">
+</p></div></div><hr id="12a8f238-6219-80c5-95d2-c17eac2d324d"/><div id="12a8f238-6219-8083-95f7-e73aee3ac47c" class="column-list"><div id="25955f73-b1b3-4d18-9b1f-a81860253dcc" style="width:50%" class="column"><h2 id="12a8f238-6219-8061-bf9f-c8e64681d1ca" class=""><strong>Eye of Cthulhu:</strong></h2><p id="12a8f238-6219-8072-8e18-f1b6c65db162" class="">Eye of Cthulhu là một nhãn cầu khổng lồ với 2.800 / <mark class="highlight-yellow">3.640</mark> / <mark class="highlight-red">4.641</mark> máu. Nó có 1/3 (33,33%) cơ hội xuất hiện vào đầu mỗi đêm khi một người chơi trên thế giới có 200 máu tối đa trở lên và hơn 10 phòng thủ, và có 3 hoặc nhiều NPC sống trong nhà. Nó sẽ tiếp tục như vậy cho đến khi bị đánh bại lần đầu tiên. Nó cũng có thể được triệu hồi bằng cách sử dụng Suspicious Looking Eye vào ban đêm. Nếu không bị người chơi đánh bại vào cuối đêm, nó sẽ di chuyển lên trên và biến mất. Đây thường là trùm đầu tiên mà người chơi phải đối mặt. Nó di chuyển qua các khối và sinh ra Servants of Cthulhu. Ở Chế độ Chuyên gia (và Chế độ Bậc thầy), Eye of Cthulhu sẽ thực hiện một cú lao nhanh theo chuỗi ở dạng thứ hai, sử dụng đòn tấn công thường xuyên hơn khi lượng máu của nó thấp hơn. Đòn tấn công lao nhanh theo chuỗi cũng sẽ tăng theo mức độ hung hăng theo cùng một cách. Điều này có thể khiến nó lao đi liên tục với tốc độ cao trong khi lượng máu rất thấp.</p></div><div id="7414bf1b-0fa9-47a9-a090-b44a84990bd8" style="width:50%" class="column"><h1 id="12a8f238-6219-8004-991f-f19046313b7a" class=""><strong>Guide:Eye of Cthulhu strategies</strong></h1><figure id="12a8f238-6219-8092-9b7d-dc4e76201050" class="image"><a href="Eye_of_Cthulhu_Trophy.png"><img style="width:48px" src="Eye_of_Cthulhu_Trophy.png"/></a></figure><figure id="12a8f238-6219-8048-b727-fde90018cb94" class="image"><a href="Eye_of_Cthulhu.gif"><img style="width:165.5px" src="Eye_of_Cthulhu.gif"/></a></figure><p id="12a8f238-6219-80ff-a797-c3a0e1de1086" class="">Trong Chế độ Chuyên gia (và Chế độ Bậc thầy), Eye of Cthulhu sẽ thực hiện một cú lao nhanh theo chuỗi ở dạng thứ hai, sử dụng đòn tấn công thường xuyên hơn khi lượng máu thấp hơn. Đòn tấn công lao theo chuỗi cũng sẽ tăng dần mức độ hung hăng theo cùng một cách. Điều này có thể khiến nó lao nhanh gần như liên tục ở tốc độ cao khi lượng máu rất thấp.</p></div></div><hr id="12a8f238-6219-80e7-88c2-c0055a200fb4"/><div id="12a8f238-6219-80aa-8b64-f1e1b0fc0b4d" class="column-list"><div id="ad463890-142b-46d7-a9e2-40195cb6a1a3" style="width:43.75%" class="column"><h2 id="12a8f238-6219-80d0-9079-fe3d1575ed2f" class=""><strong>Eater of Worlds:</strong></h2><p id="12a8f238-6219-80b7-8fef-c1a803905282" class="">Eater of Worlds là một con sâu khổng lồ với 10.050 / <mark class="highlight-yellow">15.120 </mark>/ <mark class="highlight-red">19.224</mark> máu. </p><p id="12a8f238-6219-8025-8d4d-e30603e34a34" class="">Eater of Worlds là một kẻ thù lớn dạng sâu di chuyển qua các ô, và được tạo thành từ nhiều phần, mỗi phần có thể tấn công riêng biệt khi bị cắt đứt. Để đánh bại nó, mỗi phần phải bị cắt nhỏ xuống còn ít hơn hai phần cơ thể để có thể giết (phần nhỏ nhất có thể là đầu và đuôi không có phần cơ thể nào). Do trang bị Corruption hữu ích như thế nào, đây có thể sẽ là trùm thứ hai phải đối mặt trong các thế giới có Corruption, thay vì những thế giới có Crimson.</p></div><div id="53999f37-c4a4-4e55-9041-4180c8eea81f" style="width:56.25%" class="column"><h1 id="12a8f238-6219-8088-8fe2-f91c7fd0eaef" class=""><strong>Guide:Eater of Worlds strategies</strong></h1><figure id="12a8f238-6219-807b-89a6-d2ed0caf4a8d" class="image"><a href="Eater_of_Worlds_Trophy.png"><img style="width:48px" src="Eater_of_Worlds_Trophy.png"/></a></figure><figure id="12a8f238-6219-80a4-92e0-f0594a2eb789" class="image"><a href="Eater_of_Worlds.png"><img style="width:432px" src="Eater_of_Worlds.png"/></a></figure><p id="12a8f238-6219-8085-bf60-e5e10fce426a" class="">Eater of Worlds là nguồn duy nhất của Shadow Scales trong trò chơi và nó thả ra một lượng lớn Demonite Ore. Demonite Ore có thể được bán với giá gần 10 vàng cho mỗi chồng 99, về mặt kỹ thuật, đây là trùm tốt nhất để cày trong chế độ tiền Hardmode trong trò chơi.</p><p id="12a8f238-6219-809a-9b28-ce4d9fb46566" class="">Trong Chế độ chuyên gia, trùm có thể bắn những viên đạn màu xanh lục đậm vào người chơi có tên là Vile Spit, tương tự như những viên đạn bắn ra từ Corruptors, một kẻ thù khác chỉ có ở Corruption. Trong thế giới có hạt giống For the worth hoặc Get fixed boi, nếu một phân đoạn bị đánh bại, nó sẽ tạo ra một Eater of Souls khổng lồ.</p></div></div><hr id="12a8f238-6219-8077-96c1-f36001d588a1"/><div id="12a8f238-6219-8045-ab7e-f94e4d12934e" class="column-list"><div id="a92c9522-234c-47a1-a5e9-a33a88207c53" style="width:50%" class="column"><h2 id="12a8f238-6219-804a-a6bc-c5c9251ef795" class=""><strong>Brain of Cthulhu:</strong></h2><p id="12a8f238-6219-80e9-87df-d15285498513" class="">Brain of Cthulhu là một bộ não lớn, biết bay với chỉ 1.250 / <mark class="highlight-yellow">2.125</mark> / <mark class="highlight-red">2.709</mark> máu, khiến nó trở thành con trùm có lượng máu thấp nhất. Nó xuất hiện sau mỗi ba Crimson Heart bị phá vỡ hoặc ngay sau khi sử dụng Bloody Spine. Crimson Hearts được tìm thấy trong các vực thẳm của Crimson, được bao quanh bởi Crimstone, có thể vượt qua bằng các phương pháp tương tự như Ebonstone. Tuy nhiên, một số túi chứa những thứ này sẽ mở ra. Khi ở trong phạm vi, Crimson Hearts có thể bị phá hủy bằng Búa hoặc bất kỳ chất nổ nào. Nó chỉ có thể được triệu hồi trong Crimson, nhưng vào bất kỳ thời điểm nào trong ngày.</p><p id="12a8f238-6219-804e-b78d-f2dbde4f8742" class="">Brain of Cthulhu là nguồn duy nhất của Tissue Samples trong trò chơi (ngoài Creeper sinh ra khi chiến đấu với nó) và thả một lượng lớn Crimtane Ore, tương đương với các vật phẩm Corruption Shadow Scale và Demonite Ore.</p><p id="12a8f238-6219-80b6-8a5a-f94dfe10dd11" class="">Ở chế độ Expert, ở dạng thứ hai của Brain of Cthulhu, nó sẽ bắt đầu tạo ra ảo ảnh của chính nó để lao vào người chơi. Sức khỏe của Brain of Cthulhu càng thấp, ảo ảnh càng trở nên khó nhận biết, đến mức chúng sẽ trông giống hệt Brain of Cthulhu thật.</p></div><div id="0ebfe9ca-3a12-4afc-a341-01deb92b6cae" style="width:49.99999999999999%" class="column"><p id="3f137c7d-d3e3-4099-b39d-d7c993d64d06" class="">
+</p><h1 id="12a8f238-6219-8098-9dcf-ed3ed29190c4" class=""><strong>Guide:Brain of Cthulhu strategies</strong></h1><figure id="12a8f238-6219-8070-b26a-df20f63914ff" class="image"><a href="Brain_of_Cthulhu_Trophy.png"><img style="width:48px" src="Brain_of_Cthulhu_Trophy.png"/></a></figure><figure id="12a8f238-6219-8019-9832-c5a0d2ef6c3f" class="image"><a href="Brain_of_Cthulhu.gif"><img style="width:432px" src="Brain_of_Cthulhu.gif"/></a></figure><p id="12a8f238-6219-8070-950f-f2c65f467b62" class="">Brain of Cthulhu là nguồn duy nhất của Tissue Samples trong trò chơi (ngoài Creeper sinh ra khi chiến đấu với nó) và thả một lượng lớn Crimtane Ore, tương đương với các vật phẩm Corruption Shadow Scale và Demonite Ore.</p><p id="12a8f238-6219-80db-bf8e-f91846a6faa4" class="">Ở chế độ Expert, ở dạng thứ hai của Brain of Cthulhu, nó sẽ bắt đầu tạo ra ảo ảnh của chính nó để lao vào người chơi. Sức khỏe của Brain of Cthulhu càng thấp, ảo ảnh càng trở nên khó nhận biết, đến mức chúng sẽ trông giống hệt Brain of Cthulhu thật.</p><p id="12a8f238-6219-80a5-90a4-d9e35faafc27" class="">
+</p></div></div><hr id="12a8f238-6219-801b-a673-d7231293b7d8"/><div id="12a8f238-6219-8031-9212-e3a18b8d729d" class="column-list"><div id="176ed1bd-a4b9-4a4b-bb1a-ee131ae2ad96" style="width:43.75%" class="column"><h2 id="12a8f238-6219-801b-a197-c852d409e476" class=""><strong>Queen Bee:</strong></h2><p id="12a8f238-6219-80be-a9f1-f6cf0e4b23de" class="">Queen Bee là một con ong khổng lồ với 3.400 / <mark class="highlight-yellow">4.760</mark> / <mark class="highlight-red">6.069</mark> máu. Nó được triệu hồi bằng cách tiêu diệt một Larva, được bao bọc trong các bức tường của Bee Hives nằm trong Underground Jungle, hoặc bằng cách sử dụng Abeemination ở bất kỳ đâu trong quần xã Jungle. Đây là nguồn duy nhất của Bee Wax trong trò chơi.</p><p id="12a8f238-6219-809a-83f1-e477da6f2526" class="">Queen Bee luân phiên giữa việc lao vào người chơi, lơ lửng phía trên họ trong khi sinh ra Bees và di chuyển sang trái và phải trong khi bắn ra nọc độc. Ở Chế độ chuyên gia, tốc độ lao vào người chơi càng nhanh thì sát thương nó phải chịu càng nhiều.</p></div><div id="680dd629-9dd4-4e3a-bd72-afc9455b95d7" style="width:56.25%" class="column"><p id="f5964369-36eb-40e5-a6e1-3107116d0a00" class="">
+</p><h1 id="12a8f238-6219-806e-9b53-f5c2894297d6" class=""><strong>Guide:Queen Bee strategies</strong></h1><figure id="12a8f238-6219-805c-8069-fe1db9b65463" class="image"><a href="Queen_Bee_Trophy.png"><img style="width:48px" src="Queen_Bee_Trophy.png"/></a></figure><figure id="12a8f238-6219-8076-a1b4-fb6d60bcddde" class="image"><a href="Queen_Bee.gif"><img style="width:192px" src="Queen_Bee.gif"/></a></figure><p id="12a8f238-6219-805d-8840-c0a22fc6d168" class="">Đánh bại Queen Bee sẽ cho phép Witch Doctor xuất hiện; ngoài điều này ra, nó không thúc đẩy trò chơi theo một nghĩa chính nào, mặc dù việc đánh bại nó sẽ cung cấp một số chiến lợi phẩm kha khá có thể giúp người chơi chuẩn bị cho các trận chiến trùm khác, chẳng hạn như chống lại Wall of Flesh. Một trong những vũ khí như vậy là Beenade, cực kỳ hiệu quả khi chiến đấu với Wall of Flesh.</p></div></div><hr id="12a8f238-6219-80b0-9c66-c85eb88bf05f"/><div id="12a8f238-6219-8030-85b8-c6a62f8785a7" class="column-list"><div id="dd721cb9-f733-45c7-9eb0-fad9db756a1b" style="width:37.5%" class="column"><h2 id="12a8f238-6219-80a9-afc2-d5f17a045342" class="">Skeletron:</h2><p id="12a8f238-6219-8081-9e65-d01aee3c764d" class="">Skeletron là một đầu xương lớn với 4.400 / <mark class="highlight-yellow">8.800</mark> / <mark class="highlight-red">11.220</mark> máu và hai tay. Ban đầu, nó được triệu hồi bằng cách nói chuyện với NPC Old Man ở lối vào Dungeon và kích hoạt lời nguyền của ông ta vào ban đêm, nhưng có thể được triệu hồi lại bằng cách giết Clothier trong khi được trang bị Clothier Voodoo Doll vào ban đêm.</p><p id="12a8f238-6219-8047-b74a-e7e0eeb9dc1a" class="">Skeletron sẽ luân phiên giữa việc tấn công người chơi bằng tay và thực hiện một đòn tấn công xoay tròn. Có thể tấn công và đánh bại tay của nó để trận chiến dễ dàng hơn, mặc dù điều này không bắt buộc. Nếu nó chưa bị đánh bại trước khi đêm kết thúc, Skeletron sẽ quay với tốc độ cao, gây ra lượng sát thương rất lớn thường giết chết người chơi chỉ trong một đòn, cho đến khi nó bị đánh bại hoặc tất cả người chơi đều chết.</p></div><div id="ccf0ef1a-9834-41d8-85af-7a65220e71bb" style="width:62.5%" class="column"><h1 id="12a8f238-6219-8071-8adb-ff16601c4197" class=""><strong>Guide:Skeletron strategies</strong></h1><figure id="12a8f238-6219-80f8-9e42-cf894aca03c9" class="image"><a href="Skeletron_Trophy.png"><img style="width:48px" src="Skeletron_Trophy.png"/></a></figure><p id="1692e0ef-5a8e-4207-aced-3deb47b08fa5" class="">
+</p><figure id="12a8f238-6219-8010-b091-f6864cda829f" class="image"><a href="Skeletron.png"><img style="width:240px" src="Skeletron.png"/></a></figure><p id="12a8f238-6219-80b7-a6a3-cce45b651276" class="">Ở Chế độ chuyên gia, đầu của Skeletron có khả năng chống chịu sát thương tốt hơn cho đến khi tay của nó bị phá hủy. Khi một tay bị phá hủy, nó sẽ bắt đầu bắn những đầu lâu tự dẫn đường vào người chơi. Nó cũng nhanh hơn nhiều. Tay của nó gây ra hiệu ứng làm chậm và đầu của nó gây ra hiệu ứng chảy máu. Nếu người chơi bị trúng đòn tấn công xoay đầu, Skeletron có thể &quot;làm choáng&quot; họ, một tình huống nguy hiểm mà chỉ có thể thoát được bằng khả năng di chuyển cao, ví dụ như bằng móc. Đánh bại Skeletron sẽ ngăn Dungeon Guardians xuất hiện, cho phép truy cập miễn phí vào Dungeon.</p></div></div><hr id="12a8f238-6219-805f-bdd1-d4269617482d"/><div id="12a8f238-6219-8003-87e8-cc6d444bb8a5" class="column-list"><div id="90484af4-23ff-4c8d-8d6f-429ae40a5e4f" style="width:50%" class="column"><h2 id="12a8f238-6219-8057-9e6a-d5f2694d7c6c" class="">Deerclops:</h2><p id="12a8f238-6219-802e-b3ff-ebf2eb32e8ac" class="">Deerclops là một con hươu lớn, thẳng đứng, một mắt với 7.000 / <mark class="highlight-yellow">11.900</mark> / <mark class="highlight-red">15.172</mark> máu. Nó có thể xuất hiện vào lúc nửa đêm trong Bão tuyết nếu một người chơi trên thế giới có ít nhất 9 phòng thủ hoặc 200 máu. Nếu Deerclops đã từng bị đánh bại trên thế giới, thì chỉ có 1/4 (25%) khả năng điều này xảy ra. Nó có thể được triệu hồi bằng cách sử dụng Deer Thing bất kỳ lúc nào khi ở trong quần xã Tuyết.</p><p id="12a8f238-6219-800c-8f74-fb67fcb8360f" class="">Deerclops có bốn / năm đòn tấn công:</p><p id="12a8f238-6219-8036-8d07-cc13a3c3b6a8" class="">Nếu ở gần người chơi, Deerclops sẽ đập xuống đất, triệu hồi một đợt Ice Spikes di chuyển nhanh về phía người chơi. Mỗi đợt thứ ba liên tiếp không đi xa như vậy, nhưng lan ra theo cả hai hướng. Ice Spikes đóng băng người chơi trong thời gian ngắn.<br/>Nếu không đủ gần mục tiêu để sử dụng đòn tấn công Ice Spikes, Deerclops sẽ xúc và sau đó ném nhiều mảnh vỡ lên không trung rơi xuống. Những mảnh băng này có thể xuyên qua các khối.<br/>Deerclops thỉnh thoảng sẽ đứng yên và gầm lên, gây hiệu ứng làm chậm cho tất cả người chơi trong phạm vi 50 ô[1] trong 12/24/30 giây, trừ khi họ đã bị ảnh hưởng bởi hiệu ứng làm chậm.<br/>Nếu người chơi ở trên Deerclops đủ lâu, nó sẽ triệu hồi năm Bàn tay bóng tối xung quanh người chơi.<br/>Ở Chế độ chuyên gia, Bàn tay bóng tối sẽ được triệu hồi định kỳ, có thể di chuyển chậm về phía trước, di chuyển nhanh về phía trước và cong, hoặc quay tại chỗ. Bàn tay bóng tối được triệu hồi thường xuyên hơn khi sức khỏe của Deerclops giảm. Bàn tay bóng tối dự đoán chuyển động của người chơi.<br/></p></div><div id="fd91b763-159a-425d-be1f-87d2de886d52" style="width:50%" class="column"><h1 id="12a8f238-6219-80d2-a1e9-eaccb1981693" class=""><strong>Guide:Deerclops strategies</strong></h1><figure id="12a8f238-6219-80bb-a9bd-d4485302c085" class="image"><a href="Deerclops_Trophy.png"><img style="width:48px" src="Deerclops_Trophy.png"/></a></figure><p id="72519a8d-5730-4a3c-b2d9-1dc88b894dad" class="">
+</p><figure id="12a8f238-6219-8050-9061-f6579aa6ed4d" class="image"><a href="Deerclops.gif"><img style="width:192px" src="Deerclops.gif"/></a></figure><p id="12a8f238-6219-8029-a0ba-dee6dda4a825" class="">Lưu ý:</p><p id="12a8f238-6219-809e-afa3-ea831527d576" class="">Deerclops không thể xuyên qua các khối rắn, nhưng nếu người chơi ở trên nó và Deerclops không thể với tới chúng, nó sẽ nhanh chóng bay lên qua các khối để tiếp cận người chơi.<br/>Nếu người chơi cách xa hơn 30 ô, hai hình ảnh màu đỏ, bán trong suốt của Deerclops sẽ bắt đầu quay xung quanh nó và nó trở nên miễn nhiễm với mọi sát thương.<br/>Nếu Deerclops ở ngoài màn hình đáng kể, nó sẽ đi lang thang qua lại mà không trực tiếp tìm kiếm người chơi.<br/>Nếu tất cả người chơi đã chết hoặc không có ai ở gần, Deerclops sẽ đi lang thang thay vì biến mất ngay lập tức. Điều này sẽ xảy ra cho đến khi một người chơi đến gần trùm, tại thời điểm đó, cuộc chiến sẽ tiếp tục như bình thường.<br/>Sau một ngày trong trò chơi (24 phút ngoài đời thực) trôi qua kể từ khi Deerclops xuất hiện, nó sẽ biến mất ngay khi không có người chơi nào ở gần. Việc rời khỏi và quay lại thế giới cũng sẽ khiến nó biến mất.<br/></p></div></div><hr id="12a8f238-6219-8061-ad61-ec59b3ed990b"/><div id="12a8f238-6219-80b5-8a51-d240538ac558" class="column-list"><div id="74991c1c-5a57-4229-a94c-79d4a096bbdf" style="width:56.25%" class="column"><h2 id="12a8f238-6219-80ba-bd18-c88f6c6008b9" class=""><strong>Wall of Flesh:</strong></h2><p id="12a8f238-6219-80fd-96d8-df194aa29f62" class="">Wall of Flesh là một bức tường cao ngất ngưởng trải dài toàn bộ chiều cao màn hình. Nó có 8.000 / <mark class="highlight-yellow">11.200</mark> / <mark class="highlight-red">14.280 </mark>máu. Nó được triệu hồi bằng cách ném một Búp bê Voodoo Hướng dẫn vào một hồ dung nham khi Hướng dẫn còn sống. Đánh bại nó sẽ kích hoạt Hardmode không thể đảo ngược trong thế giới. Nó có thể thả một số vật phẩm mạnh mẽ, một trong số đó là Pwnhammer thả chắc chắn có thể được sử dụng để phá vỡ Demon Altars hoặc Crimson Altars để tạo ra nhiều loại quặng Hardmode tiến triển trong trò chơi.</p><p id="12a8f238-6219-8060-8a4e-dc5b823abec6" class="">Khi triệu hồi Wall of Flesh, người chơi sẽ bị ảnh hưởng bởi debuff Horrified, ngăn không cho chạy trốn khỏi trận chiến - bất kỳ nỗ lực nào để làm như vậy sẽ dẫn đến sát thương nghiêm trọng thông qua The Tongue hoặc tử vong ngay lập tức nếu người chơi cố gắng dịch chuyển đi, và debuff sẽ không bị xóa cho đến khi người chơi hoặc Wall of Flesh bị tiêu diệt. Sau đó, Wall of Flesh sẽ quét qua bản đồ, di chuyển nhanh hơn khi lượng máu của nó giảm xuống. Nó phải bị tiêu diệt trước khi đến cuối bản đồ, nếu không nó sẽ biến mất và bất kỳ người chơi nào còn sống trong Underworld sẽ chết ngay lập tức. Ngoài ra, mắt của Wall of Flesh bắn ra tia laser, tốc độ bắn tăng dần khi nó chịu sát thương. Miệng của nó ợ ra Đỉa sẽ đuổi theo người chơi và nó có những cái miệng nhỏ gắn vào nó gọi là The Hungry, cũng sẽ di chuyển về phía và gây sát thương cho người chơi.</p></div><div id="6da7f301-fd73-4366-9866-e1bf997b77bd" style="width:43.75%" class="column"><h1 id="12a8f238-6219-806a-8f0f-e9c66592def5" class=""><strong>Guide:Wall of Flesh strategies</strong></h1><figure id="12a8f238-6219-80bc-b25c-e69b389a2452" class="image"><a href="Wall_of_Flesh_Trophy.png"><img style="width:48px" src="Wall_of_Flesh_Trophy.png"/></a></figure><figure id="12a8f238-6219-80e0-9c52-ff5f1e9b10c4" class="image"><a href="Wall_of_Flesh.gif"><img style="width:192px" src="Wall_of_Flesh.gif"/></a></figure><p id="12a8f238-6219-808e-b485-fdb61fff090e" class="">Ở Chế độ chuyên gia, Wall of Flesh sẽ tăng đáng kể tốc độ di chuyển khi máu của nó giảm, cuối cùng vượt qua cả những người chơi cưỡi Bunny Mount hoặc ngựa về tốc độ di chuyển. The Hungry sẽ nhanh chóng hồi sinh, do đó dường như chặn bức tường khỏi các đòn tấn công và có thể tự gây ra sát thương đáng kể. Wall of Flesh di chuyển càng nhanh và The Hungry hồi sinh càng nhanh thì người chơi sẽ phải tập trung vào việc gây sát thương và di chuyển trên một địa hình phù hợp.</p></div></div><hr id="12a8f238-6219-8014-9a81-ee875ab60199"/><div id="12a8f238-6219-807a-8156-dadc9617d777" class="column-list"><div id="ac78f08c-307a-448f-81b8-cf8cc39a3522" style="width:31.25%" class="column"><h2 id="12a8f238-6219-8075-b70e-c46e23b87d0e" class=""><strong>Queen Slime:</strong></h2><p id="12a8f238-6219-8030-bafd-db7c999bb644" class="">Queen Slime là một con slime khổng lồ với 18.000 / <mark class="highlight-yellow">28.800</mark> / <mark class="highlight-red">36.720</mark> máu. Nó có thể chiến đấu khi bắt đầu Hardmode và được triệu hồi từ Gelatin Crystals trong Underground Hallow. Đây là một trận đấu trùm tùy chọn và là một khoảng cách nhỏ để thử thách trước khi đối mặt với các trùm cơ khí, đảm bảo nâng cấp trang bị và các vật phẩm khác. Nó rất giống với King Slime trước Hardmode và là một trong hai trùm Hallowed có trong trò chơi.<br/><br/><br/></p></div><div id="80dd01ff-a962-474e-bd88-ea438ab01687" style="width:68.75%" class="column"><h1 id="12a8f238-6219-8035-839c-ea5ce84c9b3a" class=""><strong>Guide:Queen Slime strategies</strong></h1><figure id="12a8f238-6219-8096-9402-c2359517a74a" class="image"><a href="Queen_Slime_Trophy.png"><img style="width:48px" src="Queen_Slime_Trophy.png"/></a></figure><figure id="12a8f238-6219-809a-b33a-fb8d253b9b7e" class="image"><a href="Queen_Slime.png"><img style="width:288px" src="Queen_Slime.png"/></a></figure><p id="12a8f238-6219-8034-9908-fc355a7809c5" class="">Khi bị tấn công, nó sẽ sinh ra Crystal Slime, Bouncy Slime và Heavenly Slime để hỗ trợ. Trong khi hình dạng đầu tiên của nó rất đơn giản với các kiểu tấn công tương tự như King Slime, thì hình dạng thứ hai gây ra nhiều mối đe dọa hơn khi trùm bắt đầu bay trên không, bắn đạn từ trên cao.</p><p id="12a8f238-6219-8010-aeba-e4d908ec6c78" class="">
+</p></div></div><hr id="12a8f238-6219-806e-83bf-fd9dc47cb97c"/><div id="12a8f238-6219-8082-bd09-c1438f01d7e8" class="column-list"><div id="c92864a5-1c9e-4c63-9410-c914735108d3" style="width:50%" class="column"><h2 id="12a8f238-6219-8034-8694-e3d2b365970d" class=""><strong>The Twins:</strong></h2><p id="12a8f238-6219-806a-bffe-d996759b20a3" class="">The Twins là một cặp Mắt Cthulhu điện tử. Chúng tồn tại dưới dạng hai thực thể riêng biệt, được gọi là Retinazer và Spazmatism, với Retinazer có 20.000 / <mark class="highlight-yellow">30.000</mark> / <mark class="highlight-red">38.250</mark> máu và Spazmatism có 23.000 / <mark class="highlight-yellow">34.500</mark> / <mark class="highlight-red">43.987</mark> máu. The Twins được triệu hồi bằng một Mắt cơ học vào ban đêm. Điều đáng chú ý là chúng sẽ có khả năng phòng thủ ở dạng thứ hai, không giống như Mắt Cthulhu.</p><p id="12a8f238-6219-80e7-ba5e-df1cfc508d66" class="">Hai mắt có phong cách chiến đấu khác nhau. Retinazer tập trung vào việc bắn người chơi bằng Tia laser tử thần như Đầu dò của Kẻ hủy diệt. Khi đạt 40% máu, nó sẽ biến đổi thành dạng thứ hai, thay thế đồng tử bằng một khẩu pháo laser. Trong dạng này, nó sẽ bắn tia laser cực nhanh, đôi khi có tốc độ bắn tương đương với Megashark.Con mắt còn lại, Spazmatism, tập trung vào việc đập vào người chơi và bắn ra ngọn lửa bị nguyền rủa. Khi đạt 40% máu, nó sẽ biến thành dạng thứ hai, giống như phiên bản cơ học của dạng thứ hai của Eye of Cthulhu. Nó sẽ gây nhiều sát thương hơn và ngọn lửa mà nó bắn ra đồng đều hơn như Flamethrower thay vì Cursed Flames, nhưng ngọn lửa vẫn sẽ gây ra debuff Cursed Inferno cho người chơi. Twin cuối cùng bị tiêu diệt sẽ làm rơi toàn bộ chiến lợi phẩm.</p><p id="12a8f238-6219-804c-b5a7-e42ab33611a7" class="">
+</p></div><div id="92dc3d1f-2f26-436e-bb1b-11dc2bcaf213" style="width:50%" class="column"><h1 id="12a8f238-6219-8025-a7e1-c8cc32e62590" class=""><strong>Guide:The Twins strategies</strong></h1><figure id="12a8f238-6219-80e6-8619-e1228044ecf0" class="image"><a href="Spazmatism_Trophy.png"><img style="width:48px" src="Spazmatism_Trophy.png"/></a></figure><figure id="12a8f238-6219-80a9-b0c0-f9b9ca7b624e" class="image"><a href="Retinazer_Trophy.png"><img style="width:48px" src="Retinazer_Trophy.png"/></a></figure><p id="12a8f238-6219-8073-a763-eee9f6fbd07b" class="">
+</p><figure id="12a8f238-6219-8078-aff0-dadd34208185" class="image"><a href="The_Twins.gif"><img style="width:288px" src="The_Twins.gif"/></a></figure><p id="12a8f238-6219-80af-9d33-d0b0ebe57d12" class="">Ở chế độ Expert, Retinazer sẽ bắn tia laser nhanh hơn và Spazmatism sẽ sạc nhanh hơn ở dạng thứ hai.</p></div></div><hr id="12a8f238-6219-8033-8332-e96a2cc593ef"/><div id="12a8f238-6219-80ce-a09f-e85207789ee1" class="column-list"><div id="90919000-b1d0-4388-b5f5-fad86c63ac5f" style="width:50%" class="column"><h2 id="12a8f238-6219-80bb-afd6-f1d307353052" class=""><strong>The Destroyer:</strong></h2><p id="12a8f238-6219-80f1-a24f-d8dc693f98b5" class="">Destroyer là một Eater of Worlds cơ giới khổng lồ với 80.000 / <mark class="highlight-yellow">120.000</mark> / <mark class="highlight-red">153.000</mark> máu. Nhiều người chơi coi đây là trùm Hardmode dễ nhất, mặc dù có lượng máu cao thứ hai.</p><p id="12a8f238-6219-8032-a0fb-f15623797fea" class="">Destroyer được triệu hồi bằng cách chế tạo và sử dụng một Mechanical Worm ở bất cứ đâu, nhưng chỉ có thể xuất hiện vào ban đêm.</p><p id="12a8f238-6219-8025-960d-ce6830509d87" class="">Mặc dù tương tự như phiên bản trước Hardmode của nó, Eater of Worlds, nhưng nó có một số điểm khác biệt chính: nó sẽ không chia thành các phân đoạn nhỏ hơn, sẽ bắn tia laser từ cơ thể nếu có đủ không gian và sẽ triển khai Probe để tấn công khi một phân đoạn bị phá hủy.</p></div><div id="06d2e46f-b4cf-4b87-8cc0-f581dce9ed21" style="width:50%" class="column"><h1 id="12a8f238-6219-80b2-a3aa-cc96aacfa6a3" class=""><strong>Guide:The Destroyer strategies</strong></h1><figure id="12a8f238-6219-805f-b03b-f6c57ed38747" class="image"><a href="Destroyer_Trophy.png"><img style="width:48px" src="Destroyer_Trophy.png"/></a></figure><p id="95a69eb3-f092-455f-b9e7-7533fa2e6b14" class="">
+</p><figure id="12a8f238-6219-8099-a8e6-d2970aca8760" class="image"><a href="The_Destroyer.png"><img style="width:288px" src="The_Destroyer.png"/></a></figure><p id="12a8f238-6219-8006-8aee-ff8660fad817" class="">Destroyer sẽ bắn Tia laser tử thần, tăng tốc độ tấn công khi mất máu. Nên sử dụng các vũ khí gây sát thương cho nhiều phân đoạn như Flails, Daedalus Stormbow và Demon Scythe, vì chúng sẽ tấn công nhiều phần của Destroyer cùng một lúc.</p><p id="12a8f238-6219-80d9-a1a0-e84435fdd6f1" class="">Ở chế độ Chuyên gia, đầu của Kẻ hủy diệt có thể gây sát thương lên tới 280/420, khiến người chơi bị thương nếu bị tấn công trực diện.</p></div></div><hr id="12a8f238-6219-8010-a80f-f85f1bfed4b6"/><div id="12a8f238-6219-8087-89e4-d93cac936ab7" class="column-list"><div id="04505a17-abb4-47f5-a5e4-2b443af5c6ea" style="width:37.5%" class="column"><h2 id="12a8f238-6219-8079-aec8-fcee5f4aee3d" class=""><strong>Skeletron Prime:</strong></h2><p id="12a8f238-6219-808f-9e64-d6ebd2332e6f" class="">Skeletron Prime là một biến thể cơ học vũ khí của Skeletron, với riêng phần đầu có 28.000 / <mark class="highlight-yellow">42.000</mark> / <mark class="highlight-red">53.550</mark> máu. Thay vì hai tay, nó có bốn chi – một cái kẹp, súng laser, cưa và đại bác. Với phần đầu và tất cả các chi kết hợp, Skeletron Prime có 59.000 / 88.500 / 112.836 máu.</p><p id="12a8f238-6219-80ca-85db-cdaf91d9d64a" class="">Skeletron Prime có thể được triệu hồi bằng cách sử dụng Đầu lâu cơ khí vào ban đêm.</p><p id="12a8f238-6219-80ed-88fb-cbb569dbdbb3" class="">Giống như Skeletron, chỉ cần đánh bại phần đầu. Nó di chuyển nhiều hơn so với người tiền nhiệm của nó và thường xuyên bay ra khỏi màn hình, khiến việc nhắm mục tiêu trở nên khó khăn hơn. Cũng đáng chú ý là khi đầu của nó quay, phòng thủ của nó tăng gấp đôi từ 24 lên 48, không giống như Skeletron, phòng thủ của nó giảm xuống 0 khi quay.</p><p id="12a8f238-6219-8042-9802-caf2c9f41f7d" class="">
+</p></div><div id="828cb315-7b43-4133-a814-f6d740020922" style="width:62.5%" class="column"><h1 id="12a8f238-6219-80d9-8eac-ed16d852ec99" class=""><strong>Guide:Skeletron Prime strategies</strong></h1><figure id="12a8f238-6219-80bc-a8cf-effb3d17b989" class="image"><a href="Skeletron_Prime_Trophy.png"><img style="width:48px" src="Skeletron_Prime_Trophy.png"/></a></figure><figure id="12a8f238-6219-80e8-a25a-e95962738ac1" class="image"><a href="Skeletron_Prime.gif"><img style="width:240px" src="Skeletron_Prime.gif"/></a></figure><p id="12a8f238-6219-80a6-a9b4-f221795fbb51" class="">Skeletron Prime sẽ rơi ra Hallowed Bars và Souls of Fright khi bị đánh bại, cả hai đều được sử dụng để chế tạo nhiều loại áo giáp và công cụ. Giống như Skeletron, nếu Prime không bị giết trước khi đêm kết thúc, nó sẽ quay tròn và nhắm vào người chơi, thường giết chết người chơi chỉ bằng một đòn, và sẽ biến mất sau đó.</p><p id="12a8f238-6219-8093-a129-f6223aa043e9" class="">Ở Chế độ chuyên gia, Skeletron Prime di chuyển nhanh hơn đáng kể trong đòn tấn công quay tròn của nó, tương tự như Skeletron.</p></div></div><hr id="12a8f238-6219-80cb-bf1e-c6751acf05ae"/><div id="12a8f238-6219-80c6-8e19-d9c2a57cb3f3" class="column-list"><div id="39706199-e45b-4916-b0b8-b3d024b173cb" style="width:50%" class="column"><h2 id="12a8f238-6219-8010-8db6-d62315b6e516" class="">Mechdusa:</h2><p id="12a8f238-6219-80a2-bb8c-f7b8f8f4ff0e" class="">Mechdusa là sự kết hợp của 3 trùm Cơ khí với 273000 / <mark class="highlight-yellow">348073</mark> / <mark class="highlight-red">530073</mark> máu.</p><p id="12a8f238-6219-80e0-94a4-f8471d9420b2" class="">Chỉ có thể triệu hồi bằng Ocram&#x27;s Razor trên &quot;Everything&quot; hay còn gọi là hạt giống Get fixed boi World.</p><p id="12a8f238-6219-807c-84fd-c8fc7ef170c4" class="">Mechdusa đóng vai trò là tuyến chiến đấu thay thế cho các trùm Cơ khí, vì không thể chiến đấu riêng lẻ các trùm trên các thế giới có hạt giống Everything, thay vào đó, buộc bạn phải chiến đấu với tất cả chúng cùng một lúc với tư cách là Mechdusa. Mặc dù nó không thả cúp dành riêng cho trùm đó, nhưng sẽ có khả năng nó thả cúp của cả bốn trùm cấu thành của nó.</p><p id="12a8f238-6219-8033-accd-df52f7d443aa" class="">Mặc dù không phải là trùm cuối của trò chơi, Mechdusa có lượng máu cao nhất trong số bất kỳ trùm đơn lẻ nào. Ngay cả trong Chế độ Cổ điển, Mechdusa vẫn đứng đầu Chúa tể Mặt trăng với lượng máu gấp đôi.</p></div><div id="e45b41ec-bb08-41df-be3a-8fbae9678d51" style="width:50%" class="column"><p id="a7d28cb2-9316-4355-8984-f1d6d7097fb4" class="">
+</p><figure id="12a8f238-6219-80de-91f9-fc3cd70a8d0f" class="image"><a href="Mechdusa.png"><img style="width:288px" src="Mechdusa.png"/></a></figure></div></div><hr id="12a8f238-6219-8086-b311-e50dcdea39de"/><div id="12a8f238-6219-802b-9aba-df4086ec4938" class="column-list"><div id="c3dad8c8-1a1e-421a-9635-b256c9a8639f" style="width:50%" class="column"><h2 id="12a8f238-6219-80aa-969b-ca2ee742f63a" class="">Plantera:</h2><p id="12a8f238-6219-80cc-a0c7-f1e31e651c8b" class="">Plantera là một bông hoa khổng lồ với 30.000 / <mark class="highlight-yellow">42.000</mark> / <mark class="highlight-red">53.549</mark> máu. Nó được sinh ra bằng cách phá hủy một Plantera&#x27;s Bulb, được tìm thấy trong Underground Jungle sau khi đánh bại cả ba tên trùm cơ khí. Nếu người chơi thoát khỏi Underground Jungle, Plantera sẽ trở nên &quot;nổi giận&quot;, tăng đáng kể chỉ số của nó.</p><p id="12a8f238-6219-805e-94bd-dcca6c0dfe58" class="">Plantera có hai dạng. Ở dạng đầu tiên, nó bám vào các khối rắn bằng móc giống như dây leo và bắn Hạt giống (và cuối cùng là Hạt giống độc). Ở dạng thứ hai, Plantera tăng tốc độ và di chuyển hung hăng hơn về phía người chơi. Nó cũng sẽ giải phóng nhiều tay sai Plantera&#x27;s Tentacle được gắn vào cơ thể chính.</p><p id="12a8f238-6219-8004-af6e-ca5a6d95501e" class="">Ở Chế độ chuyên gia, hạt giống có thể xuyên qua tường và có khả năng tự định hướng nhẹ, và Plantera&#x27;s Tentacles bổ sung được gắn vào mỗi móc (3 cái trên mỗi móc) ở dạng thứ hai, tổng cộng lên tới khoảng 9 tua.</p><p id="12a8f238-6219-80b6-8928-c60337c7ae82" class="">
+</p></div><div id="bb0d6fbe-bf0c-47de-970d-944eabd82b47" style="width:50%" class="column"><h1 id="12a8f238-6219-8091-8b21-de4259986022" class=""><strong>Guide:Plantera strategies</strong></h1><figure id="12a8f238-6219-80ef-b475-d539abea29ea" class="image"><a href="Plantera_Trophy.png"><img style="width:48px" src="Plantera_Trophy.png"/></a></figure><figure id="12a8f238-6219-803e-80c2-fc2efdf3b1bc" class="image"><a href="Plantera.gif"><img style="width:240px" src="Plantera.gif"/></a></figure><p id="12a8f238-6219-80b3-bb61-e283b7b0b209" class="">Sau khi Plantera bị đánh bại, Dungeon sẽ tự động sinh ra những kẻ thù Hardmode mạnh hơn, chẳng hạn như Paladin, và nhiều loại chiến lợi phẩm hơn có thể được thả ra. Ngoài ra, tốc độ lây lan của Crimson, Corruption và Hallow bị chậm lại một nửa so với tốc độ chiến đấu trước Plantera.</p></div></div><hr id="12a8f238-6219-80c7-8037-c12eb2d4a2f2"/><div id="12a8f238-6219-80a5-a7c0-e34de081798a" class="column-list"><div id="4d8addcd-9d0f-449d-b250-1651b87677fb" style="width:50%" class="column"><h2 id="12a8f238-6219-807b-9fd5-c3e801d98f06" class="">Golem:</h2><p id="12a8f238-6219-8042-8121-d6745dcbc3b2" class="">Golem là một trùm lớn với tổng cộng 60.000 /<mark class="highlight-yellow"> 90.000</mark> / <mark class="highlight-red">114.749</mark> máu. Nó được triệu hồi bằng cách sử dụng Lihzahrd Power Cell tại Lihzahrd Altar trong Jungle Temple. Để vào Jungle Temple, Plantera phải bị đánh bại để lấy được Temple Key.</p><p id="12a8f238-6219-80f3-aa66-edc16b8fb63e" class="">Golem có hai hình dạng. Trong hình dạng đầu tiên, hai nắm đấm và đầu của nó có thể bị tấn công. Giống như Skeletron, việc phá hủy nắm đấm là không cần thiết, nhưng có thể hữu ích. Khi máu của đầu cạn kiệt, nó bắt đầu bay phía trên cơ thể trong khi bắn ra những quả cầu lửa và tia mắt, để cơ thể mở ra để tấn công. Cơ thể sẽ nhảy xung quanh và đấm điên cuồng trong hình dạng này. Đánh bại cơ thể sẽ đánh bại Golem</p></div><div id="81cf57ab-4182-4d8e-a4d8-652dc2b18117" style="width:50%" class="column"><h1 id="12a8f238-6219-80b5-9585-da03c4d694f1" class=""><strong>Guide:Golem strategies</strong></h1><figure id="12a8f238-6219-80d5-b392-cafc9b58378c" class="image"><a href="Golem_Trophy.png"><img style="width:48px" src="Golem_Trophy.png"/></a></figure><figure id="12a8f238-6219-809c-aad2-c41636ae026c" class="image"><a href="Golem.gif"><img style="width:288px" src="Golem.gif"/></a></figure></div></div><hr id="12a8f238-6219-80aa-92ec-cd600be1bc86"/><div id="12a8f238-6219-8082-8806-c10345830d3b" class="column-list"><div id="920d41d0-de70-4e98-9940-beae5dc567e3" style="width:43.75%" class="column"><h2 id="12a8f238-6219-80b5-90e0-c2869d4f0969" class=""><strong>Duke Fishron:</strong></h2><p id="12a8f238-6219-8064-ba8c-c9671cb5ca67" class="">Duke Fishron là một sinh vật lai giữa cá mập-lợn-rồng đột biến với 60.000 / <mark class="highlight-yellow">78.000</mark> / <mark class="highlight-red">99.450</mark> máu. Nó được triệu hồi khi sử dụng Truffle Worm làm mồi câu cá ở Đại dương.</p><p id="12a8f238-6219-80d7-9094-eed79895bf34" class="">Ở dạng đầu tiên, Duke Fishron sẽ cố gắng húc người chơi năm lần trước khi bắn bong bóng nổ hoặc triệu hồi Sharknados. Ở dạng thứ hai, Duke Fishron có đôi mắt phát sáng và tăng cường khả năng tấn công và phòng thủ. Mặc dù các đòn tấn công húc của nó vẫn giữ nguyên, nhưng thay vì bắn bong bóng trực tiếp vào người chơi, nó bay vòng tròn rất nhanh, bắn bong bóng khắp nơi. Thay vì triệu hồi Sharknados ở dạng này, Duke Fishron triệu hồi Cthulhunados lớn hơn. Chúng sẽ ở nguyên vị trí cho đến khi Duke Fishron bị đánh bại.</p></div><div id="7081a9a2-f6f2-4f9c-a97b-4329e8d229e4" style="width:56.25%" class="column"><h1 id="12a8f238-6219-8002-a4ee-da56843a0384" class=""><strong>Guide:Duke Fishron strategies</strong></h1><figure id="12a8f238-6219-802a-a00d-fbec30269fb5" class="image"><a href="Duke_Fishron_Trophy.png"><img style="width:48px" src="Duke_Fishron_Trophy.png"/></a></figure><p id="983a3356-24f4-4559-82af-cc3ab88025d0" class="">
+</p><figure id="12a8f238-6219-8085-9208-e1259a2e40ce" class="image"><a href="Duke_Fishron.gif"><img style="width:336px" src="Duke_Fishron.gif"/></a></figure><p id="12a8f238-6219-809a-90d3-e35b7d08a9e5" class="">Ở Chế độ chuyên gia, khi Duke Fishron giảm xuống dưới 15% (11700 / 14917) máu, nó sẽ chuyển sang dạng thứ ba. Ở dạng này, màn hình tối lại, Duke Fishron trở nên vô hình và chỉ có đôi mắt phát sáng của nó là có thể nhìn thấy. Nó dịch chuyển tức thời và cố gắng đâm vào người chơi với tốc độ cao một vài lần trước khi dịch chuyển tức thời lần nữa.</p></div></div><hr id="12a8f238-6219-8090-93e7-f050c5175e5f"/><div id="12a8f238-6219-8099-b637-d39d019aadbb" class="column-list"><div id="8fd629ae-c3d0-4d70-95ac-b497f4e83e04" style="width:50%" class="column"><h2 id="12a8f238-6219-80f9-95b9-d8c6148e4e07" class=""><strong>Empress of Light:</strong></h2><p id="12a8f238-6219-80f0-a52f-c1730885cecf" class="">Empress of Light là trùm theo chủ đề Hallow với 70.000 / <mark class="highlight-yellow">98.000</mark><mark class="highlight-default"> / </mark><mark class="highlight-red">124.950</mark> máu. Có thể triệu hồi bằng cách giết Prismatic Lacewing và là một trong hai trùm Hallowed có trong trò chơi. Trùm này được cho là một khoảng cách nhỏ giữa Plantera và Golem, nhưng có thể chiến đấu sau hoặc bỏ qua hoàn toàn vì đây là một trận chiến tùy chọn.</p><p id="12a8f238-6219-80e6-bfc6-d7dd6a003277" class="">Nếu người chơi chiến đấu với trùm này ngay khi nó xuất hiện, họ sẽ phải đối mặt với một mức độ khó tăng đột biến và nhiều kiểu tấn công. Trùm này cũng có thể chiến đấu vào ban ngày, điều này sẽ khiến nó &quot;nổi giận&quot;, tăng đáng kể sát thương tấn công lên mức giết ngay lập tức, nhưng sẽ thả Terraprisma khi gây ra 100% sát thương trong ngày</p></div><div id="aabe392e-5880-4322-8d39-09c11dd57e9f" style="width:50%" class="column"><h1 id="12a8f238-6219-807b-8dc3-fd42f2b8e3ef" class=""><strong>Guide:Empress of Light strategies</strong></h1><figure id="12a8f238-6219-8056-b5e0-d195d6bbe57f" class="image"><a href="Empress_of_Light_Trophy.png"><img style="width:48px" src="Empress_of_Light_Trophy.png"/></a></figure><figure id="12a8f238-6219-8045-8f0a-ed960e2fa6a0" class="image"><a href="Empress_of_Light.gif"><img style="width:624px" src="Empress_of_Light.gif"/></a></figure></div></div><hr id="12a8f238-6219-80bd-861f-f02c316a4ace"/><div id="12a8f238-6219-80b2-bd05-e5b556e7e8a6" class="column-list"><div id="a8023395-207f-4d0f-bd6e-0a86a7d65d88" style="width:50%" class="column"><h2 id="12a8f238-6219-80c8-93d3-c69824203e13" class=""><strong>Lunatic Cultist:</strong></h2><p id="12a8f238-6219-8075-a170-dde712754ecc" class="">Lunatic Cultist là một trùm nhỏ tương đối với 32.000 / <mark class="highlight-yellow">48.000</mark> / <mark class="highlight-red">99.450</mark> máu. Nó được triệu hồi bằng cách giết bốn giáo sĩ, những người sống ở lối vào Ngục tối sau khi Golem bị đánh bại. Khi Lunatic Cultist bị đánh bại, Sự kiện Mặt trăng sẽ bắt đầu.</p><p id="12a8f238-6219-8000-9486-d4808fb5ecd4" class="">Các đòn tấn công của Lunatic Cultist trở nên mạnh hơn khi nó mất máu. Lunatic Cultist bay xung quanh một cách ngẫu nhiên, luân phiên giữa việc bắn những quả cầu lửa, tạo ra một quả cầu bắn tia sét vào người chơi, bắn một bông tuyết khổng lồ bắn ra những mảnh băng xung quanh nó, bắn ra ngọn lửa bóng tối và bắn năm viên đạn có thể phá hủy hai lần liên tiếp. Lunatic Cultist cũng sẽ tạo ra các bản sao giả của chính nó, sẽ triệu hồi một Phantasm Dragon khi bị tấn công. Nếu một Phantasm Dragon vẫn còn sống và người chơi gây sát thương cho những bản sao này, nó sẽ triệu hồi một Ancient Vision thay thế. Đợi quá lâu để tấn công Lunatic Cultist thực sự cũng sẽ khiến Phantasm Dragon hoặc Ancient Vision được triệu hồi.</p></div><div id="75b89f32-3f01-4fa9-ad37-0e3aeff6e7b0" style="width:50%" class="column"><h1 id="12a8f238-6219-80a7-b2e0-e9cdc988a03b" class=""><strong>Guide:Lunatic Cultist strategies</strong></h1><figure id="12a8f238-6219-80a6-a9e2-c5e83447b58f" class="image"><a href="Lunatic_Cultist_Trophy.png"><img style="width:48px" src="Lunatic_Cultist_Trophy.png"/></a></figure><p id="648b9524-d9ce-494b-b5f3-7ae1dc02fc31" class="">
+</p><figure id="12a8f238-6219-809c-9de4-f13509b064be" class="image"><a href="Lunatic_Cultist.gif"><img style="width:288px" src="Lunatic_Cultist.gif"/></a></figure><p id="12a8f238-6219-808c-b596-c3bdb7a5eea9" class="">Ở chế độ Chuyên gia, Lunatic Cultist sẽ tạo ra Ancient Dooms cùng với các đòn tấn công khác.</p></div></div><hr id="12a8f238-6219-8005-b311-f500782c61bc"/><div id="12a8f238-6219-8069-bf85-c5413fe71c40" class="column-list"><div id="57cd72f7-b899-4582-a0f7-6497c73b8053" style="width:56.25%" class="column"><h2 id="12a8f238-6219-805b-bd44-f69acdc0ffce" class=""><strong>Moon Lord:</strong></h2><p id="12a8f238-6219-80af-9a28-e13aada58107" class="">Moon Lord là trùm cuối của Terraria, và đánh rơi phần lớn các vật phẩm cuối trò chơi, chẳng hạn như Meowmere. Nó cũng đánh rơi Luminite, một loại quặng được sử dụng để chế tạo nhiều bộ giáp và công cụ cuối trò chơi. Nó được triệu hồi bằng cách đánh bại cả bốn Trụ cột Thiên thể từ Sự kiện Mặt trăng hoặc bằng cách sử dụng Dấu ấn Thiên thể. Nó có tổng lượng máu là 145.000 / <mark class="highlight-yellow">217.500</mark> / <mark class="highlight-red">277.311</mark>, là trùm có lượng máu cao thứ hai trong trò chơi.</p><p id="12a8f238-6219-803a-9cf8-f1dfdea454bc" class="">Moon Lord có hai tay và một đầu, phải tiêu diệt bằng cách tấn công vào mắt trên chúng, và khi bị tiêu diệt sẽ giải phóng True Eyes of Cthulhu bất khả chiến bại. Khi ba con mắt bị phá hủy, lõi của Moon Lord sẽ mở ra trên ngực của nó, sau đó phải phá hủy để đánh bại trùm.</p><p id="12a8f238-6219-80c7-be87-c620137bb69e" class="">Đôi tay của Moon Lord bắn ra hai viên đạn cùng một lúc, chúng sẽ bay về phía người chơi và triệu hồi các phiên bản ma của True Eye of Cthulhu và ném chúng vào người chơi. Đôi mắt trên cùng của Moon Lord đôi khi sẽ bắn ra một Phantasmal Deathray quét qua toàn bộ màn hình.</p></div><div id="0bae70b6-8361-445e-bcbb-847183e82df2" style="width:43.75%" class="column"><h1 id="12a8f238-6219-8064-9f11-c9199d54e625" class=""><strong>Guide:Moon Lord strategies</strong></h1><figure id="12a8f238-6219-80d1-b1b0-ceaeef1847f3" class="image"><a href="Moon_Lord_Trophy.png"><img style="width:48px" src="Moon_Lord_Trophy.png"/></a></figure><p id="1816b90e-86ae-45cc-809b-3b9332420d30" class="">
+</p><figure id="12a8f238-6219-800c-9e65-dee96bceee62" class="image"><a href="Moon_Lord.png"><img style="width:288px" src="Moon_Lord.png"/></a></figure><p id="12a8f238-6219-80d5-a5c6-d6b47f8ab054" class="">Khi True Eyes of Cthulhu được giải phóng, những nơi chúng từng ở sẽ gây ra sát thương tiếp xúc nhỏ. True Eyes of Cthulhu sẽ bắn ra các phiên bản ít gây sát thương hơn của nhiều đòn tấn công giống như khi chúng vẫn còn bị bao bọc trong Moon Lord.</p><p id="12a8f238-6219-8070-bac3-fbf9460c4415" class="">Ở chế độ chuyên gia, đòn tấn công Phantasmal Deathray của Moon Lord gây ra nhiều sát thương hơn, đủ để giết hầu hết người chơi chỉ bằng một đòn.</p></div></div><hr id="12a8f238-6219-80e9-b0aa-ff8a1ca3294c"/><h1 id="12a8f238-6219-8085-89de-e06bddaa92f7" class=""><strong>Event bosses</strong></h1><hr id="12a8f238-6219-807b-abf5-f373f633af41"/><div id="12a8f238-6219-80f3-aa5b-efe4a019ef2d" class="column-list"><div id="ed6b3f6a-d5de-41b6-bc82-27bcc60badca" style="width:50%" class="column"><h2 id="12a8f238-6219-8016-9647-e0eabc0897ba" class=""><strong>Dark Mage:</strong></h2><p id="12a8f238-6219-8035-982c-c0b270c73297" class="">Dark Mage là một trùm nhỏ xuất hiện trong đợt cuối cùng của sự kiện Old One&#x27;s Army Tier 1. Nó có ba đòn tấn công, từ ném năng lượng đen vào người chơi, đến triệu hồi một rune chữa lành cho kẻ địch gần đó hoặc triệu hồi nhiều Old One&#x27;s Skeleton xung quanh nó.</p><p id="12a8f238-6219-807a-9562-d6b7a742aa6e" class="">
+</p></div><div id="9f2b1171-c545-419e-be38-d462c85ebfff" style="width:50%" class="column"><h1 id="12a8f238-6219-80b6-a516-e9f6f8cb15b3" class=""><strong>Guide:Old One&#x27;s Army strategies</strong></h1><figure id="12a8f238-6219-8013-b14d-d2430e43e864" class="image"><a href="Dark_Mage_Trophy.png"><img style="width:48px" src="Dark_Mage_Trophy.png"/></a></figure><p id="d90b05f8-06e5-419f-a118-5a4fe51ccdfc" class="">
+</p><figure id="12a8f238-6219-8057-9166-f43dc563333a" class="image"><a href="Dark_Mage.gif"><img style="width:192px" src="Dark_Mage.gif"/></a></figure></div></div><hr id="12a8f238-6219-80f5-b066-d217e7027aa5"/><div id="12a8f238-6219-8022-b028-d028fd102996" class="column-list"><div id="a5ffaab5-4567-4c19-bc32-62daebe1af51" style="width:50%" class="column"><h2 id="12a8f238-6219-80dd-842f-e8d2b9216ed2" class="">Ogre:</h2><p id="12a8f238-6219-8038-b544-f2a271e283ce" class="">Ogre là một trùm nhỏ xuất hiện trong đợt cuối cùng của sự kiện Old One&#x27;s Army Tier 2. Trùm nhỏ này có ba đòn tấn công, bao gồm ném nước mũi vào mục tiêu gây hiệu ứng Oozed, nhảy lên không trung tạo ra sóng xung kích gây sát thương khi hạ cánh và vung cây chùy lớn vào kẻ địch ở phía trước.</p><p id="12a8f238-6219-80f3-afab-e3f6db3a28be" class="">
+</p></div><div id="09523a8a-2739-4cb7-890f-89401a2b19da" style="width:50%" class="column"><h1 id="12a8f238-6219-805c-b2be-f163d61ca16e" class=""><strong>Guide:Old One&#x27;s Army strategies</strong></h1><figure id="12a8f238-6219-807a-beba-e12ef2b60ae0" class="image"><a href="Ogre_Trophy.png"><img style="width:48px" src="Ogre_Trophy.png"/></a></figure><p id="d9be82e3-352c-460d-8e73-9a78b6f42654" class="">
+</p><figure id="12a8f238-6219-8010-8dc4-e61ba9ac4969" class="image"><a href="Ogre.gif"><img style="width:240px" src="Ogre.gif"/></a></figure></div></div><hr id="12a8f238-6219-8018-bb02-dc40fc0deffd"/><div id="12a8f238-6219-80bf-bbec-efb3f3037aad" class="column-list"><div id="c59f335f-9e7a-4476-a772-8a087b4115e3" style="width:50%" class="column"><h2 id="12a8f238-6219-80c9-92f3-fd7d3f078409" class="">Betsy:</h2><p id="12a8f238-6219-80b9-b248-c529bc58eca0" class="">Betsy là trùm xuất hiện trong đợt cuối cùng của sự kiện Old One&#x27;s Army Tier 3. Wyvern tấn công theo cách tương tự như Duke Fishron, lao vào người chơi và phun ra những luồng lửa. Nó cũng có những đòn tấn công khác, phóng ra những quả cầu lửa vào mục tiêu và triệu hồi hai Etherian Wyverns bên cạnh nó.</p></div><div id="cd68a6d0-93f4-4ad8-8d06-66e380cb74f8" style="width:50%" class="column"><h1 id="12a8f238-6219-805e-aa0e-e9518f1006b7" class=""><strong>Guide:Old One&#x27;s Army strategies</strong></h1><figure id="12a8f238-6219-8055-b00b-c8c61ee75a4c" class="image"><a href="Betsy_Trophy.png"><img style="width:48px" src="Betsy_Trophy.png"/></a></figure><figure id="12a8f238-6219-805f-bc4b-e081e0b6e34c" class="image"><a href="Betsy.gif"><img style="width:192px" src="Betsy.gif"/></a></figure></div></div><hr id="12a8f238-6219-8075-926b-ec3954c5ce6b"/><div id="12a8f238-6219-8047-974b-e2a5ebdb0b03" class="column-list"><div id="074aa995-f390-4b3d-8b02-8eaf2aeb067f" style="width:50%" class="column"><h2 id="12a8f238-6219-807c-8d01-daa3ea8b1bb8" class=""><strong>Flying Dutchman:</strong></h2><p id="12a8f238-6219-80c5-b958-e2966309796e" class="">Flying Dutchman là trùm phụ của Pirate Invasion. Ban đầu nó sẽ xuất hiện sau khi hoàn thành 65% cuộc xâm lược. Nó sẽ xuất hiện nhiều kẻ thù Pirate khác nhau để tấn công người chơi và có bốn khẩu pháo bắn đạn đại bác vào đó phải bị phá hủy trước khi nó có thể chết, tương tự như Martian Saucer. Flying Dutchman không biến mất sau khi cuộc xâm lược kết thúc, nhưng nó sẽ phát nổ nếu chưa bị tấn công trước khi kết thúc nói trên xảy ra. Nhiều Flying Dutchmen có thể xuất hiện cùng một lúc</p></div><div id="3fe07227-e921-40f2-a2b3-df98445a10e2" style="width:50%" class="column"><figure id="12a8f238-6219-80d0-89f5-d8eb6a5eed78" class="image"><a href="Flying_Dutchman_Trophy.png"><img style="width:48px" src="Flying_Dutchman_Trophy.png"/></a></figure><p id="3e7d1c50-2623-4a91-982f-41190d27dd3d" class="">
+</p><figure id="12a8f238-6219-8064-8026-f2352cad33d2" class="image"><a href="Flying_Dutchman.gif"><img style="width:288px" src="Flying_Dutchman.gif"/></a></figure></div></div><hr id="12a8f238-6219-807f-8f92-cc5a4ec9dd5f"/><div id="12a8f238-6219-80ea-8319-f6f863906cef" class="column-list"><div id="64a412bb-5f8e-4adb-8ef5-8e1aea6a0196" style="width:50%" class="column"><h2 id="12a8f238-6219-8045-8a50-db076633a6e5" class=""><strong>Mourning Wood:</strong></h2><p id="12a8f238-6219-80bf-86bd-c9a412baa1e3" class="">Mourning Wood là một mini-boss xuất hiện trong Pumpkin Moon. Nó bắn ra những viên đạn lửa vào người chơi, xuyên qua các khối. Nó cũng phun ra một luồng gai lửa từ đầu, chúng sẽ ở trên mặt đất một lúc, gây sát thương lửa khi tiếp xúc.</p></div><div id="7f9578dc-c360-4f41-a306-89398a614e70" style="width:50%" class="column"><h1 id="12a8f238-6219-8068-b893-f4ff2fda0ef3" class=""><strong>Guide:Pumpkin Moon strategies</strong></h1><figure id="12a8f238-6219-8043-9902-cf4a210b78b8" class="image"><a href="Mourning_Wood_Trophy.png"><img style="width:48px" src="Mourning_Wood_Trophy.png"/></a></figure><p id="c95f8a66-dbfc-4f18-8503-6662ae294565" class="">
+</p><figure id="12a8f238-6219-8099-b607-c2e90b15e081" class="image"><a href="Mourning_Wood.gif"><img style="width:288px" src="Mourning_Wood.gif"/></a></figure></div></div><hr id="12a8f238-6219-80a2-a2ef-c8b12b14042e"/><div id="12a8f238-6219-804f-b536-cedbdc4a82f6" class="column-list"><div id="c712e9d6-166c-4f91-9ada-f6d854ae98e2" style="width:50%" class="column"><h2 id="12a8f238-6219-8018-8bb2-e64f3e8a9e5c" class="">Pumpking: </h2><p id="12a8f238-6219-80d6-99a6-d0a12e8725bb" class="">Pumpking là trùm phụ thứ hai và cũng là trùm cuối cùng trong sự kiện Pumpkin Moon. Có thể có nhiều Pumpking cùng lúc, tối đa là sáu con ở đợt thứ mười lăm cuối cùng (hoặc thậm chí nhiều hơn trong chế độ nhiều người chơi). Trùm phụ này sở hữu hai cánh tay có lưỡi hái vung và bắn đạn vào người chơi, tương tự như Skeletron. Nó luân phiên giữa các chế độ tấn công từ vung vào người chơi đến bắn ra những tia gai rực lửa, được chỉ ra bằng khuôn mặt được khắc trên quả bí ngô mà nó dùng làm đầu.</p><p id="12a8f238-6219-80da-bfbf-f3621c1daf0e" class="">
+</p></div><div id="f6340706-e2b8-4655-ab64-c300e1252f6a" style="width:50%" class="column"><h1 id="12a8f238-6219-8041-8ea0-de6936be1ea6" class=""><strong>Guide:Pumpkin Moon strategies</strong></h1><figure id="12a8f238-6219-80a7-a93a-f767f72b0a5d" class="image"><a href="Pumpking_Trophy.png"><img style="width:48px" src="Pumpking_Trophy.png"/></a></figure><p id="64f6c54a-48a5-4aaf-b90f-73524595b79d" class="">
+</p><figure id="12a8f238-6219-80ca-9c8f-f9fe02f3938f" class="image"><a href="Pumpking.gif"><img style="width:240px" src="Pumpking.gif"/></a></figure></div></div><hr id="12a8f238-6219-80d5-8f07-f4d2e6b56858"/><div id="12a8f238-6219-80c4-b3ae-c0d8277ed1b5" class="column-list"><div id="e7e88b32-40aa-4802-9c6b-04647275fb80" style="width:50%" class="column"><h2 id="12a8f238-6219-8098-a2df-f387b3d4e100" class="">Everscream:</h2><p id="12a8f238-6219-80e7-8eff-dc80b69c9e4b" class="">Everscream là một mini-boss có thể được tìm thấy trong sự kiện Frost Moon. Đòn tấn công của nó thay đổi giữa việc bắn ra những viên đạn kim thông và thả những đồ trang trí nảy trên mặt đất vỡ thành từng mảnh.</p><p id="12a8f238-6219-8078-8ce3-d6d5c166ee24" class=""><br/><br/><br/></p></div><div id="ffdfd8aa-2a05-49f3-8123-05f52c015287" style="width:50%" class="column"><h1 id="12a8f238-6219-80e6-9ea7-c07be9e28b34" class=""><strong>Guide:Frost Moon strategies</strong></h1><figure id="12a8f238-6219-8050-8319-cbd079f834c5" class="image"><a href="Everscream_Trophy.png"><img style="width:48px" src="Everscream_Trophy.png"/></a></figure><figure id="12a8f238-6219-80f4-b253-e1d96e8b1a08" class="image"><a href="Everscream.gif"><img style="width:240px" src="Everscream.gif"/></a></figure></div></div><hr id="12a8f238-6219-8015-bf10-f1a89acd7a47"/><div id="12a8f238-6219-80aa-9428-c9362c0302b7" class="column-list"><div id="d382a88e-b876-4efb-a4be-59252258d231" style="width:50%" class="column"><h2 id="12a8f238-6219-80c0-b051-c152ce790691" class=""><strong>Santa-NK1:</strong></h2><p id="12a8f238-6219-80f0-b773-dbd0702c6d5d" class="">Santa-NK1 là một mini-boss xuất hiện trong sự kiện Frost Moon. Nó tấn công bằng cách bắn đạn liên tục từ súng máy vào người chơi, tung ra những món quà mưa và dù từ trên trời và bắn tên lửa vào người chơi xuyên qua các khối. Khuôn mặt của nó biến mất để lộ ra một khuôn mặt robot trong hình dạng thứ hai.</p></div><div id="49fc55d6-ce0b-4a01-8cee-c14547396dc0" style="width:50%" class="column"><h1 id="12a8f238-6219-8059-9686-c127598e17d7" class=""><strong>Guide:Frost Moon strategies</strong></h1><figure id="12a8f238-6219-802d-899c-c836fefb0503" class="image"><a href="Santa-NK1_Trophy.png"><img style="width:48px" src="Santa-NK1_Trophy.png"/></a></figure><p id="7ab6325e-adee-405b-b7d4-aa6b8dd7919c" class="">
+</p><figure id="12a8f238-6219-8050-a6b0-dc4083c3cc8d" class="image"><a href="Santa-NK1.gif"><img style="width:192px" src="Santa-NK1.gif"/></a></figure></div></div><hr id="12a8f238-6219-80be-be8c-c2e6f2369adc"/><div id="12a8f238-6219-80f1-a7e0-f1633bef1e69" class="column-list"><div id="0d54c1a9-1260-44e4-aad5-b630853f8a20" style="width:50%" class="column"><h2 id="12a8f238-6219-80aa-9adf-e3a7938a7233" class=""><strong>Ice Queen:</strong></h2><p id="12a8f238-6219-8035-b9cf-ce84ea4e21bb" class="">Ice Queen là mini-boss thứ ba và cũng là mini-boss cuối cùng xuất hiện trong sự kiện Frost Moon. Nhiều Ice Queen có thể xuất hiện trong sự kiện. Đòn tấn công của nó bao gồm quay nhanh bắn ra những tia băng theo nhiều hướng và bắn nhiều đợt băng vào người chơi.</p></div><div id="45c7b02b-56cb-429c-8632-d49ffc4364db" style="width:50%" class="column"><h1 id="12a8f238-6219-8047-b48c-cc4788ec55b2" class=""><strong>Guide:Frost Moon strategies</strong></h1><figure id="12a8f238-6219-803e-8107-dcf194478c9d" class="image"><a href="Ice_Queen_Trophy.png"><img style="width:48px" src="Ice_Queen_Trophy.png"/></a></figure><p id="bd82bc4f-fb3e-40ca-8e5c-1004b121d243" class="">
+</p><figure id="12a8f238-6219-801a-a34f-ca0ad0e04c09" class="image"><a href="Ice_Queen.gif"><img style="width:240px" src="Ice_Queen.gif"/></a></figure></div></div><hr id="12a8f238-6219-8098-8cdd-ddda8437d4ca"/><div id="12a8f238-6219-8091-941d-c385ce7d0d57" class="column-list"><div id="b8332870-18b9-4adc-a58c-4be871ba3ced" style="width:50%" class="column"><h2 id="12a8f238-6219-8010-8755-c37c5931f3b5" class=""><strong>Martian Saucer:</strong></h2><p id="12a8f238-6219-80e5-ac67-f4c4696a1e8e" class="">Martian Saucer là một trùm nhỏ biết bay lớn xuất hiện trong sự kiện Martian Madness. Nó có hai dạng, dạng đầu tiên yêu cầu phá hủy tháp pháo trước khi lõi của nó có thể bị hư hại. Trong dạng đầu tiên, đĩa bay sẽ thực hiện ba đòn tấn công, trong đó nó sẽ bắn một loạt tia laser vào người chơi, bắn tên lửa tự dẫn hoặc cố gắng làm tan rã người chơi bằng một tia laser lớn từ bên dưới. Trong Chế độ chuyên gia (tất cả các cấp độ khó trong phiên bản tiếng Trung cổ Old Chinese và tModLoader 1 tModLoader Legacy), sau khi các tháp pháo bị hạ gục, trùm nhỏ sẽ bắt đầu nhanh chóng đuổi theo người chơi, quét nhanh và bắn tia tử thần vào họ.</p></div><div id="533f1644-5a2b-49bf-a3f7-5c9d6d2b571c" style="width:50%" class="column"><figure id="12a8f238-6219-80fb-8941-cd89512740a2" class="image"><a href="Martian_Saucer_Trophy.png"><img style="width:48px" src="Martian_Saucer_Trophy.png"/></a></figure><p id="885d6659-11e3-4f2d-b9b7-fcca3aba7e72" class="">
+</p><figure id="12a8f238-6219-80e5-aff2-c190ed6dfad5" class="image"><a href="Martian_Saucer.gif"><img style="width:384px" src="Martian_Saucer.gif"/></a></figure></div></div><hr id="12a8f238-6219-8056-9b3c-e687283400ab"/><div id="12a8f238-6219-80ca-a7a8-ca632843134e" class="column-list"><div id="837b6a4f-f357-4b96-bf47-ab273cd2f05e" style="width:68.75%" class="column"><h2 id="12a8f238-6219-8089-a0e4-e3f22d61b459" class="">Solar/Nebula/Vortex/<strong>Stardust Pillar:</strong></h2><hr id="12a8f238-6219-8045-a26a-e6dc4a3b64e8"/><p id="12a8f238-6219-808d-baee-e0202480f5eb" class="">Solar Pillar là một trong bốn trùm xuất hiện trong Sự kiện Mặt trăng bắt đầu sau khi Lunatic Cultist bị đánh bại.</p><p id="12a8f238-6219-800b-92f7-fd8fa67d51c9" class="">Solar Pillar không tấn công người chơi nhiều, chủ yếu là triệu hồi kẻ thù, nhưng nó khiến các mảnh năng lượng mặt trời rơi không ngừng từ trên trời xuống. Nó được bao quanh bởi một trường lực lớn, không thể xuyên thủng cho đến khi 100/150 tay sai của nó bị tiêu diệt. Kẻ thù mà nó sinh ra là những kẻ cận chiến. Rất khuyến khích ở trên mặt đất, vì Crawltipedes mà nó sinh ra chỉ nhắm vào những người chơi trên không. Sau khi 100/<mark class="highlight-yellow">150</mark> tay sai bị tiêu diệt, trường lực xung quanh nó sẽ tan biến, cho phép người chơi tấn công nó.</p><p id="12a8f238-6219-8013-8960-e160744080ca" class="">Solar Pillar sinh ra những kẻ thù sau:</p><p id="12a8f238-6219-8092-be21-d211a9a33a8a" class="">Selenian<br/>Drakanian<br/>Corite<br/>Sroller<br/>Crawltipede<br/>Drakomire<br/></p><hr id="12a8f238-6219-80b3-b0c7-c222b1dbb07a"/><p id="12a8f238-6219-80d3-a9ab-ff9dec705605" class="">Nebula Pillar là một trong bốn trùm xuất hiện trong Sự kiện Mặt trăng bắt đầu sau khi Lunatic Cultist bị đánh bại.</p><p id="12a8f238-6219-8089-be7c-f65c1e893edb" class="">Sau khi cả 4 Celestial Pillar bị đánh bại, Moon Lord sẽ xuất hiện.</p><p id="12a8f238-6219-80b0-b648-db369c02842b" class="">Nebula Pillar không tấn công người chơi, nó sinh ra kẻ thù dựa trên phép thuật. Nó được bao quanh bởi một trường lực lớn không thể xuyên thủng cho đến khi ít nhất 100/<mark class="highlight-yellow">150</mark> tay sai của nó bị tiêu diệt. Sau khi 100/<mark class="highlight-yellow">150</mark> tay sai bị tiêu diệt, trường lực sẽ tan biến, cho phép người chơi tấn công trực tiếp.</p><p id="12a8f238-6219-802e-be95-c6b43a8595a4" class="">Nebula Pillar sinh ra những kẻ thù sau:</p><p id="12a8f238-6219-80e7-81a9-dfcfdcce17b9" class="">Nebula Floater<br/>Brain Suckler<br/>Predictor<br/>Evolution Beast<br/></p><hr id="12a8f238-6219-80d0-a904-c4e7a0f34c04"/><p id="12a8f238-6219-8043-9758-ca9dc92f7362" class="">Vortex Pillar là một trong bốn trùm xuất hiện trong Sự kiện Mặt trăng bắt đầu sau khi Lunatic Cultist bị đánh bại.</p><p id="12a8f238-6219-806a-ab05-f5b6d8b026f1" class="">Sau khi cả 4 Celestial Pillar bị đánh bại, Moon Lord sẽ xuất hiện.</p><p id="12a8f238-6219-8009-99b2-c4c75e4a0243" class="">Vortex Pillar không tấn công người chơi nhiều, chỉ thỉnh thoảng xuất hiện một quả cầu Giant Magnet giống như đòn tấn công của Lunatic Cultist. Nó sinh ra kẻ thù có tầm tấn công xa. Sau khi 100/<mark class="highlight-yellow">150</mark> tay sai của nó bị tiêu diệt, trường lực xung quanh nó sẽ tan biến, để lại nó cho người chơi tấn công.</p><p id="12a8f238-6219-8012-98ae-ef08508e3978" class="">Vortex Pillar sinh ra những kẻ thù sau: </p><p id="12a8f238-6219-80ad-805b-e949b1f984d8" class="">Vortexian<br/>Alien Queen<br/>Alien Hornet<br/>Alien Larva<br/>Storm Diver<br/></p><hr id="12a8f238-6219-80db-9b40-f811fd3b4188"/><p id="12a8f238-6219-8097-85b6-de56d3437256" class="">Stardust Pillar là một trong bốn trùm xuất hiện trong Sự kiện Mặt trăng bắt đầu sau khi Lunatic Cultist bị đánh bại.</p><p id="12a8f238-6219-8051-9c51-f1e95652064c" class="">Sau khi cả 4 Celestial Pillar bị đánh bại, Moon Lord sẽ xuất hiện.</p><p id="12a8f238-6219-80b2-8c83-dbbb4ba8fbaf" class="">Stardust Pillar không tấn công người chơi nhiều, nhưng đây là trụ duy nhất có hoạt ảnh gây sát thương khi sinh ra kẻ thù. Nó sinh ra kẻ thù dựa trên triệu hồi. Giống như các trụ khác, nó được bao quanh bởi một trường lực không thể xuyên thủng, chỉ bị phá vỡ khi 100/<mark class="highlight-yellow">150</mark> hoặc nhiều hơn số lính của nó bị tiêu diệt. Sau khi trường lực bị phá vỡ, người chơi có thể tấn công trụ theo ý muốn.</p><p id="12a8f238-6219-808c-9587-e76b89725c08" class="">Stardust Pillar sinh ra những kẻ thù sau:</p><p id="12a8f238-6219-8084-915a-f83b27407e36" class="">Star Cell<br/>Flow Invader<br/>Twinkle Popper<br/>Twinkle<br/>Stargazer<br/>Milkyway Weaver<br/></p></div><div id="111ecf36-b55d-40c2-9ac0-a82f2b0e5b15" style="width:31.25%" class="column"><p id="879fb85e-0ec1-4585-8f0b-2061902b1777" class="">
+</p><figure id="12a8f238-6219-8058-a521-f9ece4cf9fbb" class="image"><a href="Solar_Pillar.png"><img style="width:192px" src="Solar_Pillar.png"/></a></figure><figure id="12a8f238-6219-8096-ba90-e69c37afbe32" class="image"><a href="Nebula_Pillar.png"><img style="width:240px" src="Nebula_Pillar.png"/></a></figure><figure id="12a8f238-6219-8021-a834-db5da57578a9" class="image"><a href="Vortex_Pillar.png"><img style="width:240px" src="Vortex_Pillar.png"/></a></figure><figure id="12a8f238-6219-807a-9f8b-c79a38b0be41" class="image"><a href="Stardust_Pillar.png"><img style="width:336px" src="Stardust_Pillar.png"/></a></figure></div></div><hr id="12a8f238-6219-8001-90f2-d51e484f55fb"/><h2 id="12a8f238-6219-805c-803e-c8a814eb2bf1" class="">Summoned:</h2><div id="12a8f238-6219-8061-9a33-f7db15076a09" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>name boss</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>icon </th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Property</th></tr></thead><tbody><tr id="d5f2de07-623a-42e7-8927-c0a6e7b6b742"><td class="cell-title"><a href="https://www.notion.so/King-Slime-d5f2de07623a42e78927c0a6e7b6b742?pvs=21">King Slime</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Slime_Crown.png"><img style="width:20px;max-height:24px" src="Slime_Crown.png" alt="Slime_Crown.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Slime Crown</td></tr><tr id="01523dd4-1062-4d7a-b733-ff35f70b3753"><td class="cell-title"><a href="https://www.notion.so/Eye-of-Cthulhu-01523dd410624d7ab733ff35f70b3753?pvs=21">Eye of Cthulhu</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Suspicious_Looking_Eye.png"><img style="width:20px;max-height:24px" src="Suspicious_Looking_Eye.png" alt="Suspicious_Looking_Eye.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi với một Suspicious Looking Eye</td></tr><tr id="fc66613a-74bc-472f-bfd7-60fdaff05fb1"><td class="cell-title"><a href="https://www.notion.so/Eater-of-Worlds-fc66613a74bc472fbfd760fdaff05fb1?pvs=21">Eater of Worlds</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Worm_Food.png"><img style="width:20px;max-height:24px" src="Worm_Food.png" alt="Worm_Food.png"/></a></span></td><td class="cell-TlrI">Triệu hồi bằng Worm Food hoặc bằng cách phá vỡ 3 Shadow Orb</td></tr><tr id="12a8f238-6219-804a-bb9d-edfbea1b4cc3"><td class="cell-title"><a href="https://www.notion.so/Brain-of-Cthulhu-12a8f2386219804abb9dedfbea1b4cc3?pvs=21">Brain of Cthulhu</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Bloody_Spine.png"><img style="width:20px;max-height:24px" src="Bloody_Spine.png" alt="Bloody_Spine.png"/></a></span></td><td class="cell-TlrI">Triệu hồi bằng Bloody Spine hoặc bằng cách phá vỡ 3 Crimson Hearts</td></tr><tr id="12a8f238-6219-8039-9a61-eaa89fd363a5"><td class="cell-title"><a href="https://www.notion.so/Queen-Bee-12a8f238621980399a61eaa89fd363a5?pvs=21">Queen Bee</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Larva.png"><img style="width:20px;max-height:24px" src="Larva.png" alt="Larva.png"/></a></span><span style="margin-right:6px"><a href="Abeemination.png"><img style="width:20px;max-height:24px" src="Abeemination.png" alt="Abeemination.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Abeemination hoặc bằng cách phá vỡ Larva</td></tr><tr id="12a8f238-6219-801c-a208-e4286f26dd33"><td class="cell-title"><a href="https://www.notion.so/Skeletron-12a8f2386219801ca208e4286f26dd33?pvs=21">Skeletron</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Clothier_Voodoo_Doll.png"><img style="width:20px;max-height:24px" src="Clothier_Voodoo_Doll.png" alt="Clothier_Voodoo_Doll.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách kích hoạt lời nguyền của Ông già hoặc bằng cách giết Người thợ may bằng Búp bê Voodoo của Người thợ may</td></tr><tr id="12a8f238-6219-80a8-929b-e7f2ef0ebe0c"><td class="cell-title"><a href="https://www.notion.so/Deerclops-12a8f238621980a8929be7f2ef0ebe0c?pvs=21">Deerclops</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Deer_Thing.png"><img style="width:20px;max-height:24px" src="Deer_Thing.png" alt="Deer_Thing.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng  Deer Thing</td></tr><tr id="12a8f238-6219-8042-81a6-c9b4f0b935aa"><td class="cell-title"><a href="https://www.notion.so/Wall-of-Flesh-12a8f2386219804281a6c9b4f0b935aa?pvs=21">Wall of Flesh</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Guide_Voodoo_Doll.png"><img style="width:20px;max-height:24px" src="Guide_Voodoo_Doll.png" alt="Guide_Voodoo_Doll.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách ném một Búp bê Voodoo Hướng dẫn vào dung nham</td></tr><tr id="12a8f238-6219-80f6-ab03-dd8f9ce52682"><td class="cell-title"><a href="https://www.notion.so/Queen-Slime-12a8f238621980f6ab03dd8f9ce52682?pvs=21">Queen Slime</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Gelatin_Crystal.png"><img style="width:20px;max-height:24px" src="Gelatin_Crystal.png" alt="Gelatin_Crystal.png"/></a></span></td><td class="cell-TlrI">Triệu hồi bằng tinh thể gelatin</td></tr><tr id="12a8f238-6219-8011-80e6-d82fe9afa6a6"><td class="cell-title"><a href="https://www.notion.so/The-Twins-12a8f2386219801180e6d82fe9afa6a6?pvs=21">The Twins</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Mechanical_Eye.png"><img style="width:20px;max-height:24px" src="Mechanical_Eye.png" alt="Mechanical_Eye.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Mechanical Eye</td></tr><tr id="12a8f238-6219-80c0-8204-e8c18303357d"><td class="cell-title"><a href="https://www.notion.so/The-Destroyer-12a8f238621980c08204e8c18303357d?pvs=21">The Destroyer</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Mechanical_Worm.png"><img style="width:20px;max-height:24px" src="Mechanical_Worm.png" alt="Mechanical_Worm.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Mechanical Worm</td></tr><tr id="12a8f238-6219-8087-b6ba-dd3a0b323b32"><td class="cell-title"><a href="https://www.notion.so/Skeletron-Prime-12a8f23862198087b6badd3a0b323b32?pvs=21">Skeletron Prime</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Mechanical_Skull.png"><img style="width:20px;max-height:24px" src="Mechanical_Skull.png" alt="Mechanical_Skull.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Mechanical Skull</td></tr><tr id="12a8f238-6219-80d2-8466-fe6810612f9c"><td class="cell-title"><a href="https://www.notion.so/Mechdusa-12a8f238621980d28466fe6810612f9c?pvs=21">Mechdusa</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Ocrams_Razor.png"><img style="width:20px;max-height:24px" src="Ocrams_Razor.png" alt="Ocram&#x27;s_Razor.png"/></a></span></td><td class="cell-TlrI">Triệu hồi bằng Ocram&#x27;s Razor</td></tr><tr id="12a8f238-6219-8094-a94d-f99d3772d4a5"><td class="cell-title"><a href="https://www.notion.so/Plantera-12a8f23862198094a94df99d3772d4a5?pvs=21">Plantera</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Planteras_Bulb.png"><img style="width:20px;max-height:24px" src="Planteras_Bulb.png" alt="Plantera&#x27;s_Bulb.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách phá hủy một Plantera&#x27;s Bulb</td></tr><tr id="12a8f238-6219-8030-8ebb-ebbfa40e9ae4"><td class="cell-title"><a href="https://www.notion.so/Golem-12a8f238621980308ebbebbfa40e9ae4?pvs=21">Golem</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Lihzahrd_Altar.png"><img style="width:20px;max-height:24px" src="Lihzahrd_Altar.png" alt="Lihzahrd_Altar.png"/></a></span><span style="margin-right:6px"><a href="Lihzahrd_Power_Cell.png"><img style="width:20px;max-height:24px" src="Lihzahrd_Power_Cell.png" alt="Lihzahrd_Power_Cell.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách sử dụng Lihzahrd Power Cell tại Lihzahrd Altar</td></tr><tr id="12a8f238-6219-803c-ba46-f850cf2afad1"><td class="cell-title"><a href="https://www.notion.so/Duke-Fishron-12a8f2386219803cba46f850cf2afad1?pvs=21">Duke Fishron</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Truffle_Worm.png"><img style="width:20px;max-height:24px" src="Truffle_Worm.png" alt="Truffle_Worm.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách câu cá ở quần xã sinh vật Đại dương với Truffle Worm làm mồi nhử</td></tr><tr id="12a8f238-6219-8063-ba52-c1109506bbf4"><td class="cell-title"><a href="https://www.notion.so/Empress-of-Light-12a8f23862198063ba52c1109506bbf4?pvs=21">Empress of Light </a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Prismatic_Lacewing.png"><img style="width:20px;max-height:24px" src="Prismatic_Lacewing.png" alt="Prismatic_Lacewing.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách giết một Prismatic Lacewing</td></tr><tr id="12a8f238-6219-80f5-a1ce-de60eb36ecf8"><td class="cell-title"><a href="https://www.notion.so/Lunatic-Cultist-12a8f238621980f5a1cede60eb36ecf8?pvs=21">Lunatic Cultist</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Cultist_Archer.png"><img style="width:20px;max-height:24px" src="Cultist_Archer.png" alt="Cultist_Archer.png"/></a></span><span style="margin-right:6px"><a href="Lunatic_Devotee.gif"><img style="width:20px;max-height:24px" src="Lunatic_Devotee.gif" alt="Lunatic_Devotee.gif"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng cách giết tất cả các Cultists ở lối vào Dungeon</td></tr><tr id="12a8f238-6219-808c-81aa-c75f5db634ba"><td class="cell-title"><a href="https://www.notion.so/Moon-Lord-12a8f2386219808c81aac75f5db634ba?pvs=21">Moon Lord</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Celestial_Sigil.png"><img style="width:20px;max-height:24px" src="Celestial_Sigil.png" alt="Celestial_Sigil.png"/></a></span></td><td class="cell-TlrI">Được triệu hồi bằng Celestial SigilCelestial Sigil hoặc bằng cách đánh bại Celestial Pillars</td></tr><tr id="12a8f238-6219-80b9-a455-cd6dc6ca9ef0"><td class="cell-title"><a href="https://www.notion.so/Betsy-Dark-Mage-Ogre-12a8f238621980b9a455cd6dc6ca9ef0?pvs=21">Betsy/Dark Mage/Ogre</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Eternia_Crystal.png"><img style="width:20px;max-height:24px" src="Eternia_Crystal.png" alt="Eternia_Crystal.png"/></a></span></td><td class="cell-TlrI">Sự kiện được bắt đầu bằng Pha lê Eternia</td></tr><tr id="12a8f238-6219-807e-b083-df22206efc85"><td class="cell-title"><a href="https://www.notion.so/Flying-Dutchman-12a8f2386219807eb083df22206efc85?pvs=21">Flying Dutchman</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Pirate_Map.png"><img style="width:20px;max-height:24px" src="Pirate_Map.png" alt="Pirate_Map.png"/></a></span></td><td class="cell-TlrI">Sự kiện bắt đầu bằng Bản đồ cướp biển</td></tr><tr id="12a8f238-6219-8011-b97c-fe7dc1835456"><td class="cell-title"><a href="https://www.notion.so/Pumpking-Mourning-Wood-12a8f23862198011b97cfe7dc1835456?pvs=21">Pumpking/Mourning Wood</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Pumpkin_Moon_Medallion.png"><img style="width:20px;max-height:24px" src="Pumpkin_Moon_Medallion.png" alt="Pumpkin_Moon_Medallion.png"/></a></span></td><td class="cell-TlrI">Sự kiện được khởi tạo bằng Huy chương Mặt trăng bí ngô</td></tr><tr id="12a8f238-6219-804a-bfc9-e6c01ae1a6d5"><td class="cell-title"><a href="https://www.notion.so/Ice-Queen-Everscream-Santa-NK1-12a8f2386219804abfc9e6c01ae1a6d5?pvs=21">Ice Queen/Everscream/Santa-NK1</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Naughty_Present.png"><img style="width:20px;max-height:24px" src="Naughty_Present.png" alt="Naughty_Present.png"/></a></span></td><td class="cell-TlrI">Sự kiện bắt đầu bằng một Món quà nghịch ngợm</td></tr><tr id="12a8f238-6219-8062-823f-f9958001e5cd"><td class="cell-title"><a href="https://www.notion.so/Martian-Saucer-12a8f23862198062823ff9958001e5cd?pvs=21">Martian Saucer</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Martian_Probe.png"><img style="width:20px;max-height:24px" src="Martian_Probe.png" alt="Martian_Probe.png"/></a></span></td><td class="cell-TlrI">Sự kiện bắt đầu bằng cách để một tàu thăm dò sao Hỏa chạy thoát sau khi phát hiện ra người chơi</td></tr><tr id="12a8f238-6219-8091-aae5-d89c8ee934e0"><td class="cell-title"><a href="https://www.notion.so/Solar-Nebula-Vortex-Stardust-Pillar-12a8f23862198091aae5d89c8ee934e0?pvs=21">Solar/Nebula/Vortex/Stardust Pillar</a></td><td class="cell-tELN"><span style="margin-right:6px"><a href="Lunatic_Cultist.png"><img style="width:20px;max-height:24px" src="Lunatic_Cultist.png" alt="Lunatic_Cultist.png"/></a></span></td><td class="cell-TlrI">Sự kiện bắt đầu bằng việc đánh bại Lunatic Cultist</td></tr></tbody></table><br/><br/></div><hr id="12a8f238-6219-808f-bc22-e30d42c996b8"/><ul id="12a8f238-6219-8058-b152-ce1a77e73a89" class="bulleted-list"><li style="list-style-type:disc">Notes</li></ul><div id="12a8f238-6219-8064-8061-f24fcf6fcc9d" class="column-list"><div id="f534006f-8e64-413f-bcbd-c91f2d47379d" style="width:25%" class="column"><figure id="12a8f238-6219-8087-b228-cb95cfee2c85" class="image"><a href="Classic_mode_icon.png"><img style="width:48px" src="Classic_mode_icon.png"/></a></figure><hr id="12a8f238-6219-80bd-99f7-f08e591900fa"/><figure id="12a8f238-6219-80bd-bef9-c6f08774c17a" class="image"><a href="Expert_mode_icon.png"><img style="width:36px" src="Expert_mode_icon.png"/></a></figure><hr id="12a8f238-6219-8066-8f4d-f1f12a82bfa1"/><figure id="12a8f238-6219-8062-b998-f73fe7e95d2b" class="image"><a href="Master_mode_icon.png"><img style="width:36px" src="Master_mode_icon.png"/></a></figure><hr id="12a8f238-6219-8039-9538-c177677b124c"/></div><div id="eb71bab8-81b1-4596-89eb-419ccff27ce0" style="width:75%" class="column"><h2 id="f12c4d5e-289a-46ff-83ad-3c21e4d01647" class="">Classic</h2><hr id="12a8f238-6219-80c8-b17b-dae33f2d2bd1"/><h2 id="12a8f238-6219-805e-8c45-cbbcd342e81b" class=""><mark class="highlight-yellow"><strong>Expert</strong></mark></h2><hr id="12a8f238-6219-8073-b622-c876f3c56b12"/><h2 id="12a8f238-6219-8041-8581-fc59f70924e3" class=""><mark class="highlight-red"><strong>Master</strong></mark></h2><hr id="12a8f238-6219-8050-a94f-c3fc397a3c43"/><p id="12a8f238-6219-80af-8bd9-ddbd1c43075d" class="">
+</p></div></div><hr id="12a8f238-6219-8087-9fcc-f861b512743f"/><p id="12a8f238-6219-807b-a437-e293be4e8bcc" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
